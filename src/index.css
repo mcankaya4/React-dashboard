@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "sans-serif";
+  --font-sono: "Sono", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply text-gray-700;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  h1 {
+    @apply text-3xl font-semibold;
+  }
+  h2 {
+    @apply text-xl font-semibold;
+  }
+  h3 {
+    @apply text-xl font-medium;
+  }
+}
+
+@layer components {
+  .sidebar--navlink {
+    @apply flex items-center gap-3 px-6 py-3 text-base font-medium text-gray-600 duration-300 hover:rounded-sm hover:bg-gray-50 hover:text-gray-800;
+  }
+  .sidebar--navlink.active {
+    @apply rounded-sm bg-gray-50 text-gray-800;
+  }
+}
