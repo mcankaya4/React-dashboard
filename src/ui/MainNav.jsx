@@ -7,21 +7,6 @@ import {
   HiOutlineCog6Tooth,
 } from "react-icons/hi2";
 
-//   & svg {
-//     width: 2.4rem;
-//     height: 2.4rem;
-//     color: var(--color-grey-400);
-//     transition: all 0.3s;
-//   }
-//
-//   &:hover svg,
-//   &:active svg,
-//   &.active:link svg,
-//   &.active:visited svg {
-//     color: var(--color-brand-600);
-//   }
-// `;
-
 function MainNav() {
   return (
     <ul className="flex flex-col gap-2">

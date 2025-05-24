@@ -1,9 +1,11 @@
+import Row from "../ui/Row.jsx";
+
 function Dashboard() {
   return (
-    <div className="flex items-center justify-between">
+    <Row>
       <h1>Dashboard</h1>
       <p>Test</p>
-    </div>
+    </Row>
   );
 }
 

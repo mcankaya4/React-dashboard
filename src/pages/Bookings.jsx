@@ -1,9 +1,11 @@
+import Row from "../ui/Row.jsx";
+
 function Bookings() {
   return (
-    <div className="flex items-center justify-between">
+    <Row>
       <h1>All Bookings</h1>
       <p>Test</p>
-    </div>
+    </Row>
   );
 }
 

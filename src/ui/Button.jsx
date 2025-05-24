@@ -1,49 +1,31 @@
-import styled, { css } from "styled-components";
+function Button({
+  size = "medium",
+  variation = "primary",
+  type,
+  children,
+  onClick,
+}) {
+  const sizes = {
+    small: "text-xs py-1 px-2 uppercase font-semibold text-center",
+    medium: "text-sm py-3 px-4 font-medium",
+    large: "text-base py-3 px-6 font-medium",
+  };
 
-const sizes = {
-  small: css`
-    font-size: 1.2rem;
-    padding: 0.4rem 0.8rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-  `,
-  medium: css`
-    font-size: 1.4rem;
-    padding: 1.2rem 1.6rem;
-    font-weight: 500;
-  `,
-  large: css`
-    font-size: 1.6rem;
-    padding: 1.2rem 2.4rem;
-    font-weight: 500;
-  `,
-};
+  const variations = {
+    primary: "text-indigo-50 bg-indigo-600 hover:bg-indigo-700",
+    secondary: "text-grey-600 bg-white border border-gray-200 hover:bg-gray-50",
+    danger: "text-red-100 bg-red-700 hover:bg-red-800",
+  };
 
-const variations = {
-  primary: css`
-    color: var(--color-brand-50);
-    background-color: var(--color-brand-600);
+  return (
+    <button
+      onClick={onClick}
+      className={`rounded-sm ${sizes[size]} ${variations[variation]}`}
+      type={type}
+    >
+      {children}
+    </button>
+  );
+}
 
-    &:hover {
-      background-color: var(--color-brand-700);
-    }
-  `,
-  secondary: css`
-    color: var(--color-grey-600);
-    background: var(--color-grey-0);
-    border: 1px solid var(--color-grey-200);
-
-    &:hover {
-      background-color: var(--color-grey-50);
-    }
-  `,
-  danger: css`
-    color: var(--color-red-100);
-    background-color: var(--color-red-700);
-
-    &:hover {
-      background-color: var(--color-red-800);
-    }
-  `,
-};
+export default Button;

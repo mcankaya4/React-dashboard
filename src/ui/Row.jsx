@@ -1,25 +1,9 @@
-// // import styled, { css } from "styled-components";
-//
-// const Row = styled.div`
-//   display: flex;
-//
-//   ${(props) =>
-//     props.type === "horizontal" &&
-//     css`
-//       justify-content: space-between;
-//       align-items: center;
-//     `}
-//
-//   ${(props) =>
-//     props.type === "vertical" &&
-//     css`
-//       flex-direction: column;
-//       gap: 1.6rem;
-//     `}
-// `;
-//
-// Row.defaultProps = {
-//   type: "vertical",
-// };
-//
-// export default Row;
+function Row({ type = "vertical", children }) {
+  const stil = {
+    vertical: "flex flex-col gap-4",
+    horizontal: "flex items-center justify-between",
+  };
+  return <div className={stil[type]}>{children}</div>;
+}
+
+export default Row;
